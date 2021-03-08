@@ -1,0 +1,20 @@
+[
+	{
+		"id": "1",
+		"name": "Airpods Wireless Bluetooth Headphones",
+		"description": "Bluetooth technology lets you connect it with compatible devices wirelessly. High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working",
+		"price": 86.99
+	},
+	{
+		"id": "2",
+		"name": "Airpods Wireless Bluetooth Speaker",
+		"description": "Bluetooth technology lets you connect it with compatible devices wirelessly. High-quality AAC audio offers immersive listening",
+		"price": 199.99
+	},
+	{
+		"id": "3",
+		"name": "Smart Airpods Wireless Bluetooth Headphones",
+		"description": "Bluetooth technology lets you connect it with compatible devices wirelessly. High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working",
+		"price": 100.99
+	}
+]
