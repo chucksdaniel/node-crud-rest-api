@@ -2,13 +2,13 @@ let products = require("../data/products.json");
 const { writeDataToFile } = require("../utils/helper");
 const { v4: uuidv4 } = require("uuid");
 
-function findAll() {
+ const findAll = () => {
 	return new Promise((resolve, reject) => {
 		resolve(products);
 	});
 }
 
-function findById(id) {
+const findById = (id) => {
 	return new Promise((resolve, reject) => {
 		// To find the particular product the promise is suppose to return
 		const product = products.find((p) => p.id === id);
@@ -16,7 +16,7 @@ function findById(id) {
 	});
 }
 
-function create(product) {
+const create = (product) => {
 	return new Promise((resolve, reject) => {
 		const newProduct = { id: uuidv4(), ...product };
 		products.push(newProduct);
@@ -25,7 +25,7 @@ function create(product) {
 	});
 }
 
-function update(id, product) {
+const update = (id, product) => {
 	return new Promise((resolve, reject) => {
 		const index = products.findIndex((p) => p.id === id);
 		products[index] = { id, ...product };
@@ -34,7 +34,7 @@ function update(id, product) {
 		resolve(products[index]);
 	});
 }
-function remove(id) {
+const  remove = (id) => {
 	return new Promise((resolve, reject) => {
 		products = products.filter((p) => p.id !== id);
 

@@ -4,7 +4,7 @@ const { getData } = require("../utils/helper");
 //@desc     Get All product
 //@route    GET /api/products
 
-async function getAllProducts(req, res) {
+const getAllProducts = async (req, res) => {
 	try {
 		const products = await Product.findAll();
 
@@ -13,12 +13,12 @@ async function getAllProducts(req, res) {
 	} catch (error) {
 		console.log(error);
 	}
-}
+};
 
 //@desc     Get a particular product
 //@route    GET /api/products/:id
 
-async function getProduct(req, res, id) {
+const getProduct = async (req, res, id) => {
 	try {
 		const product = await Product.findById(id);
 
@@ -36,12 +36,12 @@ async function getProduct(req, res, id) {
 	} catch (error) {
 		console.log(error);
 	}
-}
+};
 
 //@desc     Create a Product
 //@route    POST /api/products
 
-async function createProduct(req, res) {
+const createProduct = async (req, res) => {
 	try {
 		const body = await getData(req);
 
@@ -60,11 +60,11 @@ async function createProduct(req, res) {
 	} catch (error) {
 		console.log(error);
 	}
-}
+};
 //@desc     Update a Product
 //@route    Put /api/products/:id
 
-async function updateProduct(req, res, id) {
+const updateProduct = async (req, res, id) => {
 	try {
 		const product = await Product.findById(id);
 
@@ -90,12 +90,12 @@ async function updateProduct(req, res, id) {
 	} catch (error) {
 		console.log(error);
 	}
-}
+};
 
 //@desc     Delete a particular product
 //@route    DELETE /api/products/:id
 
-async function deleteProduct(req, res, id) {
+const deleteProduct = async (req, res, id) => {
 	try {
 		const product = await Product.findById(id);
 
@@ -114,7 +114,7 @@ async function deleteProduct(req, res, id) {
 	} catch (error) {
 		console.log(error);
 	}
-}
+};
 
 module.exports = {
 	getAllProducts,

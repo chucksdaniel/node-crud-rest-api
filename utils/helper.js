@@ -1,15 +1,15 @@
 const fs = require("fs");
 const { resolve } = require("path");
 
-function writeDataToFile(filename, content) {
+const writeDataToFile = (filename, content) => {
 	fs.writeFileSync(filename, JSON.stringify(content), "utf-8", (err) => {
 		if (err) {
 			console.log(err);
 		}
 	});
-}
+};
 
-function getData(req) {
+const getData = (req) => {
 	return new Promise((resolve, reject) => {
 		try {
 			let body = "";
@@ -24,7 +24,7 @@ function getData(req) {
 			reject(error);
 		}
 	});
-}
+};
 
 module.exports = {
 	writeDataToFile,
