@@ -11,9 +11,10 @@ const server = http.createServer((req, res) => {
 	if (req.url === "/api/products" && req.method === "GET") {
 		getAllProducts(req, res);
 	} else if (
-		req.url.match(/\/api\/products\/([0-9]+)/) &&
+		req.url.match(/\/api\/products\/[a-zA-Z0-9_.-]*$/g) &&
 		req.method === "GET"
 	) {
+		// /\/api\/products\/([0-9]+)/ can only match numbers
 		const id = req.url.split("/")[3];
 		console.log(id);
 		getProduct(req, res, id);
